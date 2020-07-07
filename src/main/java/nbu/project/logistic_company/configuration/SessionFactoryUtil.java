@@ -1,4 +1,4 @@
-package configuration;
+package nbu.project.logistic_company.configuration;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
