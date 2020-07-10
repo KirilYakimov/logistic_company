@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/appLayout.html}">
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+    <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="text-center pt-3 pb-2 mb-2">
+                    <h1>Fill in the registration form to proceed to LogisticCompany</h1>
+                </div>
+
+                <form method="POST" action="#">
+                    <div class="form-row">
+                        <div class="font-weight-bold pb-1 mb-2">Create your account</div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" class="form-control"
+                                   placeholder="Username" name="username" required autocomplete="username"
+                                   autofocus>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email">Email address</label>
+                            <input id="email" type="text"
+                                   class="form-control"
+                                   placeholder="Email" name="email" required
+                                   autocomplete="email" autofocus>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="password">Password</label>
+                            <input id="password" type="password"
+                                   class="form-control"
+                                   placeholder="Password" name="password" required
+                                   autocomplete="new-password">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="password-confirm">Confirm password</label>
+                            <input id="password-confirm" type="password" class="form-control"
+                                   placeholder="Confirm password" name="password_confirmation" required
+                                   autocomplete="new-password">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstname">First name</label>
+                            <input id="firstname" type="text"
+                                   class="form-control"
+                                   placeholder="First name" name="firstname"
+                                   required autocomplete="firstname" autofocus>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="lastname">Last name</label>
+                            <input id="lastname" type="text"
+                                   class="form-control"
+                                   placeholder="Last name" name="lastname"
+                                   required autocomplete="lastname" autofocus>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-lg btn-primary">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
