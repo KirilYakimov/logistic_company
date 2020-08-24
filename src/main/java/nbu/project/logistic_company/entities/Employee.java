@@ -1,8 +1,10 @@
 package nbu.project.logistic_company.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import nbu.project.logistic_company.enumerable.EmployeeType;
 
 import javax.persistence.*;
 
@@ -24,7 +26,8 @@ import javax.persistence.*;
 @Setter
 @Getter
 @NoArgsConstructor
-public class EmployeeEntity {
+@AllArgsConstructor
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,9 +45,25 @@ public class EmployeeEntity {
     @Column(name="password")
     private String password;
 
+    @Enumerated(EnumType.STRING)
+    @Column (name = "employeeType",nullable = false)
+    private EmployeeType employeeType;
+
+    @ManyToOne
+    @JoinColumn (name="office_id")
+    private Office office;
+
     @Override
     public String toString() {
-        return "EmployeeEntity [id=" + id + ", firstName=" + firstName +
-                ", lastName=" + lastName + ", email=" + email   + "]";
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", employeeType=" + employeeType +
+                ", office=" + office +
+                '}';
     }
+
 }
